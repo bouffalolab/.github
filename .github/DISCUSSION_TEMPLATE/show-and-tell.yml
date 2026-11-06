@@ -1,0 +1,48 @@
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Show the community what you built with Bouffalo Lab chips. Advertising and sales posts will be removed, see the [Code of Conduct](https://github.com/bouffalolab/.github/blob/main/CODE_OF_CONDUCT.md).
+
+  - id: summary
+    type: textarea
+    attributes:
+      label: What did you build?
+      description: A short description of the project and what it does.
+    validations:
+      required: true
+
+  - id: chip
+    type: dropdown
+    attributes:
+      label: Chip
+      description: Select all that apply.
+      multiple: true
+      options:
+        - BL602 / BL604
+        - BL702 / BL704 / BL706
+        - BL702L / BL704L
+        - BL616 / BL618
+        - BL616CL
+        - BL618DG
+        - BL808
+        - BL606P
+        - Other / not chip-specific
+    validations:
+      required: false
+
+  - id: links
+    type: textarea
+    attributes:
+      label: Links
+      description: Source code, video, or write-up, if available.
+    validations:
+      required: false
+
+  - id: details
+    type: textarea
+    attributes:
+      label: Details
+      description: How it works, what you learned, photos or screenshots.
+    validations:
+      required: false

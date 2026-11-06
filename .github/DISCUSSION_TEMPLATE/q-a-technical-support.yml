@@ -1,0 +1,86 @@
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ask how to use Bouffalo Lab chips, SDKs, and tools. To report a bug, open an issue with the **Bug report** form instead.
+        When your question is answered, please mark the reply that solved it as the answer.
+
+  - id: checklist
+    type: checkboxes
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched the existing discussions and issues for an answer.
+          required: true
+        - label: I read the documentation.
+          required: true
+
+  - id: chip
+    type: dropdown
+    attributes:
+      label: Chip
+      options:
+        - BL602 / BL604
+        - BL702 / BL704 / BL706
+        - BL702L / BL704L
+        - BL616 / BL618
+        - BL616CL
+        - BL618DG
+        - BL808
+        - BL606P
+        - Other / not chip-specific
+    validations:
+      required: true
+
+  - id: board
+    type: input
+    attributes:
+      label: Board or module
+      placeholder: e.g. BL616 DK, Ai-M61-32S, custom board
+    validations:
+      required: false
+
+  - id: version
+    type: input
+    attributes:
+      label: SDK version
+      description: Release tag or commit hash.
+      placeholder: e.g. v2.3.36 or a1b2c3d
+    validations:
+      required: true
+
+  - id: environment
+    type: textarea
+    attributes:
+      label: Environment
+      description: Host OS, toolchain version, and any other tools involved.
+      placeholder: |
+        - Host OS: Ubuntu 24.04
+        - Toolchain: riscv64-unknown-elf-gcc 14.3.0
+        - Flash tool / IDE: ...
+    validations:
+      required: false
+
+  - id: question
+    type: textarea
+    attributes:
+      label: Question
+      description: What are you trying to achieve, and where are you stuck?
+    validations:
+      required: true
+
+  - id: tried
+    type: textarea
+    attributes:
+      label: What have you tried?
+    validations:
+      required: false
+
+  - id: logs
+    type: textarea
+    attributes:
+      label: Logs
+      description: Relevant build or runtime logs as text. Please do not paste screenshots of logs.
+      render: shell
+    validations:
+      required: false

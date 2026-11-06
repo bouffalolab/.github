@@ -1,0 +1,61 @@
+name: "\U0001F4A1 Feature request"
+description: Suggest a new feature or an improvement
+labels: ["enhancement"]
+body:
+  - id: checklist
+    type: checkboxes
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched the existing issues (open and closed) and this has not been requested before.
+          required: true
+
+  - id: chip
+    type: dropdown
+    attributes:
+      label: Chip
+      description: Select all that apply.
+      multiple: true
+      options:
+        - BL602 / BL604
+        - BL702 / BL704 / BL706
+        - BL702L / BL704L
+        - BL616 / BL618
+        - BL616CL
+        - BL618DG
+        - BL808
+        - BL606P
+        - Other / not chip-specific
+    validations:
+      required: false
+
+  - id: description
+    type: textarea
+    attributes:
+      label: Feature description
+      description: What would you like to be added or changed?
+    validations:
+      required: true
+
+  - id: use-case
+    type: textarea
+    attributes:
+      label: Use case
+      description: What problem does this solve? Describe the product or scenario you need it for.
+    validations:
+      required: true
+
+  - id: alternatives
+    type: textarea
+    attributes:
+      label: Alternatives considered
+      description: Workarounds or other solutions you have tried.
+    validations:
+      required: false
+
+  - id: additional
+    type: textarea
+    attributes:
+      label: Additional context
+    validations:
+      required: false

@@ -1,0 +1,17 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "\U0001F4AC Ask a question"
+    url: https://github.com/bouffalolab/bouffalo_sdk/discussions/categories/q-a-technical-support
+    about: Usage questions and technical support go to BouffaloSDK Discussions (Q&A / Technical Support), not issues.
+  - name: "\U0001F4D6 BouffaloSDK documentation"
+    url: https://bl-mcu-sdk.readthedocs.io/zh-cn/latest/
+    about: Getting started guides, API reference, and examples for BouffaloSDK (Chinese).
+  - name: "\U0001F4DA Chip datasheets and reference manuals"
+    url: https://github.com/bouffalolab/bl_docs
+    about: Hardware documentation for Bouffalo Lab chips.
+  - name: "\U0001F9F0 Toolchain downloads"
+    url: https://github.com/bouffalolab/toolchain/releases/tag/default
+    about: "RISC-V GCC toolchain. Mirror for users in China: https://gitee.com/bouffalolab/toolchain/releases/tag/latest"
+  - name: "\U0001F3E2 Business inquiries"
+    url: https://en.bouffalolab.com/contact/
+    about: Pricing, samples, purchasing, and other business questions.

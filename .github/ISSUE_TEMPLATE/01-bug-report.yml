@@ -1,0 +1,123 @@
+name: "\U0001F41B Bug report"
+description: Report something that does not work as documented
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. Please fill in every field: reports that cannot be reproduced may be closed.
+        For usage questions, ask in [BouffaloSDK Discussions](https://github.com/bouffalolab/bouffalo_sdk/discussions) instead.
+
+  - id: checklist
+    type: checkboxes
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched the existing issues (open and closed) and this is not a duplicate.
+          required: true
+        - label: I read the documentation and the problem is not addressed there.
+          required: true
+        - label: I reproduced the problem on the latest release or the default branch.
+          required: true
+
+  - id: chip
+    type: dropdown
+    attributes:
+      label: Chip
+      options:
+        - BL602 / BL604
+        - BL702 / BL704 / BL706
+        - BL702L / BL704L
+        - BL616 / BL618
+        - BL616CL
+        - BL618DG
+        - BL808
+        - BL606P
+        - Other / not chip-specific
+    validations:
+      required: true
+
+  - id: board
+    type: input
+    attributes:
+      label: Board or module
+      placeholder: e.g. BL616 DK, Ai-M61-32S, custom board
+    validations:
+      required: false
+
+  - id: version
+    type: input
+    attributes:
+      label: Version
+      description: Release tag or commit hash of this repository.
+      placeholder: e.g. v2.3.36 or a1b2c3d
+    validations:
+      required: true
+
+  - id: environment
+    type: textarea
+    attributes:
+      label: Environment
+      description: Host OS, toolchain version, and any other tools involved.
+      placeholder: |
+        - Host OS: Ubuntu 24.04
+        - Toolchain: riscv64-unknown-elf-gcc 14.3.0
+        - Flash tool / IDE: ...
+    validations:
+      required: false
+
+  - id: description
+    type: textarea
+    attributes:
+      label: What happened?
+      description: Describe the actual behavior.
+    validations:
+      required: true
+
+  - id: expected
+    type: textarea
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - id: steps
+    type: textarea
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Build examples/... with `make CHIP=bl616 BOARD=bl616dk`
+        2. Flash and reset the board
+        3. Run ...
+        4. See error
+    validations:
+      required: true
+
+  - id: frequency
+    type: dropdown
+    attributes:
+      label: How often does it happen?
+      options:
+        - Always
+        - Often
+        - Rarely
+        - Only once
+    validations:
+      required: true
+
+  - id: logs
+    type: textarea
+    attributes:
+      label: Logs
+      description: Complete build or runtime logs as text. Please do not paste screenshots of logs.
+      render: shell
+    validations:
+      required: false
+
+  - id: additional
+    type: textarea
+    attributes:
+      label: Additional context
+      description: Minimal code, configuration, or anything else that helps reproduce the problem.
+    validations:
+      required: false
